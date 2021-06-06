@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'second.dart';
 
 void main() {
   runApp(MyApp());
@@ -44,7 +45,15 @@ class MyImage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  IconButton(icon: Icon(Icons.menu), onPressed: () {}),
+                  IconButton(
+                    icon: Icon(Icons.menu),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext conntext) => MyAbc()));
+                    },
+                  ),
                   Text("Sort/Filter")
                 ],
               )
